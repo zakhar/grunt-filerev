@@ -4,7 +4,7 @@ var path = require('path');
 var fs = require('fs');
 
 module.exports = function (grunt) {
-  grunt.registerMultiTask('filerev', 'File revisioning based on content hashing', function () {
+  grunt.registerMultiTask('filever', 'File revisioning based on content hashing', function () {
     var options = this.options({
       encoding: 'utf8',
       algorithm: 'md5',
