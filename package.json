@@ -1,6 +1,6 @@
 {
-  "name": "grunt-filerev",
-  "version": "0.1.1",
+  "name": "grunt-filever",
+  "version": "0.0.1",
   "description": "Asset revisioning by using file content hashing",
   "keywords": [
     "gruntplugin",
@@ -8,16 +8,16 @@
     "rev",
     "minify"
   ],
-  "homepage": "https://github.com/yeoman/grunt-filerev",
-  "bugs": "https://github.com/yeoman/grunt-filerev/issues",
+  "homepage": "https://github.com/zakhar/grunt-filever",
+  "bugs": "https://github.com/zakhar/grunt-filever/issues",
   "author": {
-    "name": "Frederick Ros",
-    "email": "frederick.ros@gmail.com",
-    "url": "https://github.com/sleeper"
+    "name": "Zakhar Zibarov",
+    "email": "zakhar.zibarov@gmail.com",
+    "url": "https://github.com/zakhar"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/yeoman/grunt-filerev.git"
+    "url": "git://github.com/zakhar/grunt-filever.git"
   },
   "scripts": {
     "test": "grunt"

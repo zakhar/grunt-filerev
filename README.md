@@ -1,14 +1,15 @@
-# grunt-filerev [![Build Status](https://secure.travis-ci.org/yeoman/grunt-filerev.png?branch=master)](http://travis-ci.org/yeoman/grunt-filerev)
-
+# grunt-filever
 > Static asset revisioning through file content hash
 
+This is a fork of https://github.com/yeoman/grunt-filerev with some difference:
+* Adding suffix ?v={{filever}} to grunt.filerev (instead of file renaming) for the next usemin processing
 
 ## Getting Started
 
 If you haven't used [grunt][] before, be sure to check out the [Getting Started][] guide, as it explains how to create a [gruntfile][Getting Started] as well as install and use grunt plugins. Once you're familiar with that process, install this plugin with this command:
 
 ```shell
-npm install --save-dev grunt-filerev
+npm install --save-dev grunt-filever
 ```
 
 [grunt]: http://gruntjs.com
@@ -95,8 +96,8 @@ the content `grunt.filerev.summary` could look like that:
 
 ```js
 {
-  'img1.png': 'tmp/img1.59bcc3ad.png',
-  'img2.png': 'tmp/img2.060b1aa6.png'
+  'img1.png': 'tmp/img1.png?v=59bcc3ad',
+  'img2.png': 'tmp/img2.png?v=060b1aa6'
 }
 ```
 

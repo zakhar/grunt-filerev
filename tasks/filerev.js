@@ -33,18 +33,13 @@ module.exports = function (grunt) {
       el.src.forEach(function (file) {
         var dirname;
         var hash = crypto.createHash(options.algorithm).update(grunt.file.read(file), options.encoding).digest('hex');
-        var suffix = hash.slice(0, options.length);
-        var ext = path.extname(file);
-        var newName = [path.basename(file, ext), suffix, ext.slice(1)].join('.');
+        var ver = hash.slice(0, options.length);
+        var newName = file + '?v=' + ver;
         var resultPath;
 
-        if (move) {
-          dirname = path.dirname(file);
-          resultPath = path.resolve(dirname, newName);
-          fs.renameSync(file, resultPath);
-        } else {
+        if (!move) {
           dirname = el.dest;
-          resultPath = path.resolve(dirname, newName);
+          resultPath = path.resolve(dirname, path.basename(file));
           grunt.file.copy(file, resultPath);
         }
 
